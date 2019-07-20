@@ -111,7 +111,7 @@ public object AdaptiveComponent {
     fun getZoomRate(context: Context): BigDecimal {
         val screenWidth = getScreenWidth(context)
         val designWidth = getDesignWidth(context)
-        return BigDecimal(screenWidth).divide(BigDecimal(designWidth))
+        return BigDecimal(screenWidth).divide(BigDecimal(designWidth), 2, BigDecimal.ROUND_HALF_EVEN);
     }
 
     fun getScreenWidth(context: Context): Int {
